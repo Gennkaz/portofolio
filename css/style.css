@@ -609,11 +609,6 @@ span{
     font-size: 8rem;
 }
 
-.project{
-    background: url('https://github.com/Gennkaz/portofolio/tree/main/img/back.jpg') center no-repeat;
-    background-size: cover;
-}
-
 .project-box{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
