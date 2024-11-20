@@ -4,13 +4,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('header nav a');
 
-    // Handle scroll event
     window.onscroll = () => {
         sections.forEach(sec => {
             let top = window.scrollY; 
-            let offset = sec.offsetTop - 150;  // Section offset
-            let height = sec.offsetHeight;  // Section height
-            let id = sec.getAttribute('id');  // Section ID
+            let offset = sec.offsetTop - 150;
+            let height = sec.offsetHeight;
+            let id = sec.getAttribute('id');
 
             if (top >= offset && top < offset + height) {
                 navLinks.forEach(links => {
@@ -21,9 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Toggle menu visibility on icon click
     menuicon.addEventListener('click', () => {
-        // Toggle icon to 'x' and show/hide navbar
         menuicon.classList.toggle('bx-x');
         navbar.classList.toggle('active');
     });
