@@ -610,7 +610,7 @@ span{
 }
 
 .project{
-    background: url('/img/back.jpg') center no-repeat;
+    background: url('img/back.jpg') center no-repeat;
     background-size: cover;
 }
 
