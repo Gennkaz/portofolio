@@ -609,11 +609,6 @@ span{
     font-size: 8rem;
 }
 
-.project{
-    background: url('/img/back.jpg') center no-repeat;
-    background-size: cover;
-}
-
 .project-box{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -916,8 +911,9 @@ span{
     }
     .project-box{
         grid-template-columns: repeat(1,1fr);
+        padding: 0 10px;
     }
     .project-box img{
-        min-width: 38rem;
+        min-width: 42rem;
     }
 }
