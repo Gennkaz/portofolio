@@ -67,7 +67,7 @@ body{
 .navbar a{
     font-size: 1.8rem;
     color: var(--text-color);
-    margin-left: 4rem;
+    margin-left: 2rem;
     font-weight: 500;
     transition: 0.3s ease;
     -webkit-transition: 0.3s ease;
@@ -652,6 +652,82 @@ span{
     font-size: 8rem;
 }
 
+.aplikasi{
+    background: var(--bg-color);
+    color: white;
+}
+
+.aplikasi .aplikasi-container{
+    color: var(--text-color);
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    padding: 2rem;
+    margin: auto;
+    margin-top: 2rem;
+}
+
+.aplikasi .aplikasi-container .row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    flex-wrap: wrap;
+    gap: 1.8rem;
+}
+
+.aplikasi .aplikasi-container .bar{
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    background: var(--second-bg-color);
+    box-shadow: 0 4px 10px var(--bg-color);
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
+    -moz-transition: 0.3s ease;
+    -ms-transition: 0.3s ease;
+    -o-transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.aplikasi .aplikasi-container .bar:hover{
+    box-shadow: 0 4px 10px var(--main-color);
+    transform: scale(1.03);
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+}
+
+.aplikasi .aplikasi-container .bar .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.aplikasi .aplikasi-container .bar .info img{
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+    width: 150px;
+    height: 150px;
+}
+
+.aplikasi .aplikasi-container .bar .info span{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    color: var(--text-color);
+}
+
 .project-box{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -983,6 +1059,23 @@ span{
     .skill-container{
         grid-template-columns: repeat(1,1fr);
     }
+
+    .aplikasi .aplikasi-container{
+        margin: 0;
+        padding: 0;
+    }
+
+    .aplikasi .aplikasi-container .row{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+        padding: 2rem 0.2rem 2rem 0.2rem;
+        gap: 1rem;
+    }
+
+    .aplikasi .aplikasi-container{
+        margin-top: 5px;
+    }
+
     .project-box{
         grid-template-columns: repeat(1,1fr);
     }
