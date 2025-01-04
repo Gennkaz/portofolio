@@ -4,9 +4,18 @@ document.addEventListener('DOMContentLoaded', () => {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('header nav a');
 
+    if (!localStorage.getItem('isFirstVisit')) {
+        localStorage.setItem('isFirstVisit', 'true');
+        document.getElementById('preloader').style.display = 'flex';
+        document.getElementById('content').style.display = 'none';
+    } else {
+        document.getElementById('preloader').style.display = 'none';
+        document.getElementById('content').style.display = 'block';
+    }
+
     window.onscroll = () => {
         sections.forEach(sec => {
-            let top = window.scrollY; 
+            let top = window.scrollY;
             let offset = sec.offsetTop - 150;
             let height = sec.offsetHeight;
             let id = sec.getAttribute('id');
@@ -46,7 +55,11 @@ document.getElementById('toggle-theme').addEventListener('click', function() {
 
 window.addEventListener('load', function () {
     setTimeout(function() {
+        document.getElementById('preloader').style.opacity = '0';
+    }, 0);
+
+    setTimeout(function() {
         document.getElementById('preloader').style.display = 'none';
         document.getElementById('content').style.display = 'block';
-    }, 1500);
+    }, 10000);
 });
